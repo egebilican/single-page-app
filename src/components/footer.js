@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 
 const Footer = () => {
@@ -16,11 +16,11 @@ const Footer = () => {
         <View
           style={buttonContainerStyle}
         >
-          <Text style={buttonStyle}>HOME</Text>
-          <Text style={buttonStyle}>ABOUT</Text>
-          <Text style={buttonStyle}>BLOG</Text>
-          <Text style={buttonStyle}>PRESS</Text>
-          <Text style={buttonStyle}>CONTACT</Text>
+          <TouchableOpacity><Text style={buttonStyle}>HOME</Text></TouchableOpacity>
+          <TouchableOpacity><Text style={buttonStyle}>ABOUT</Text></TouchableOpacity>
+          <TouchableOpacity><Text style={buttonStyle}>BLOG</Text></TouchableOpacity>
+          <TouchableOpacity><Text style={buttonStyle}>PRESS</Text></TouchableOpacity>
+          <TouchableOpacity><Text style={buttonStyle}>CONTACT</Text></TouchableOpacity>
         </View>
       </View>
     </View>
@@ -43,7 +43,8 @@ const styles = {
   },
   buttonStyle: {
     paddingLeft: 10,
-    fontFamily: 'Montserrat',    
+    fontFamily: 'Montserrat',   
+    fontWeight: '700' 
   },
   buttonContainerStyle: {
     flexDirection: 'row',

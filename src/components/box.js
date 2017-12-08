@@ -19,11 +19,11 @@ const Box = props => {
           }}
         />
         <Text style={textOverPic}>{price}</Text>
-        <View style={textStyle}>
+        <View style={{backgroundColor:'rgb(255,255,255)'}}>
           <View>
             <Text style={headerStyle}>{header}</Text>
           </View>
-          <Text>{children}</Text>
+          <Text style={textStyle}>{children}</Text>
         </View>
       </View>
       </TouchableOpacity>
@@ -32,11 +32,11 @@ const Box = props => {
   return (
     <TouchableOpacity>
     <View style={boxStyle}>
-      <View style={textStyle}>
+      <View style={{backgroundColor:'rgb(255,255,255)'}}>
         <View >
           <Text style={headerStyle}>{header}</Text>
         </View>
-        <Text>{children}</Text>
+        <Text style={textStyle}>{children}</Text>
       </View>
     </View>
     </TouchableOpacity>    
@@ -51,8 +51,7 @@ const styles = {
     margin: 20,
     padding: 0,
     zIndex: 0,
-    position: 'relative',
-    borderWidth: 1
+    position: 'relative'
   },
   textOverPic: {
     position:'absolute',
@@ -69,17 +68,13 @@ const styles = {
     width: undefined
   },
   textStyle: {
-    backgroundColor: 'rgb(255,255,255)',
-    padding: 0
+    fontFamily:'Open Sans'
   },
   textStyle2: {},
   headerStyle: {
-    fontWeight: '700'
+    fontWeight: '700',
+    fontFamily:'Montserrat'
   }
 };
 
 export default Box;
-
-/*
-
-      */

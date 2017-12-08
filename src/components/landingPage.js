@@ -28,7 +28,15 @@ export default class LandingPage extends Component {
         <View style={contentStyle}>
           <View style={bannerContStyle}>
             <View style={bannerStyle}>
-              <Text style={{ color: 'white', fontSize: 32 }}>Travelly</Text>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: 32,
+                  fontFamily: 'Open Sans'
+                }}
+              >
+                travelly
+              </Text>
               <TouchableOpacity>
                 <Text style={{ color: 'white', fontSize: 32 }}>||||</Text>
               </TouchableOpacity>
@@ -71,12 +79,13 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignContent: 'center',
-    margin: 5
+    margin: 5,
   },
   bannerContStyle: {
     flex: 1,
-    alignContent: 'center',
-    justifyContent: 'center'
+    alignItems: 'stretch',
+    justifyContent: 'center',
+    flexDirection: 'column'
   },
   textContStyle: {
     flex: 3,
@@ -85,6 +94,7 @@ const styles = {
   textStyle: {
     textAlign: 'center',
     fontSize: 52,
-    color: 'white'
+    color: 'white',
+    fontFamily: 'Open Sans'
   }
 };
