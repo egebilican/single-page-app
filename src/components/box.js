@@ -6,19 +6,20 @@ const window = Dimensions.get('window');
 //360 width
 
 const Box = props => {
-  const { picUrl, header, children } = props;
+  const { picUrl, header, children, price } = props;
+  const { headerStyle, boxStyle, picStyle, textStyle, textOverPic } = styles;
   if (props.picUrl) {
     return (
-      <View style={styles.boxStyle}>
+      <View style={boxStyle}>
         <Image
-          style={styles.picStyle}
+          style={picStyle}
           source={{
             uri: picUrl
           }}
         />
-
-        <View style={styles.textStyle}>
-          <View style={styles.headerStyle}>
+        <Text style={textOverPic}>{price}</Text>
+        <View style={textStyle}>
+          <View style={headerStyle}>
             <Text>{header}</Text>
           </View>
           <Text>{children}</Text>
@@ -27,9 +28,9 @@ const Box = props => {
     );
   }
   return (
-    <View style={styles.boxStyle}>
-      <View style={styles.textStyle}>
-        <View style={styles.headerStyle}>
+    <View style={boxStyle}>
+      <View style={textStyle}>
+        <View style={headerStyle}>
           <Text>{header}</Text>
         </View>
         <Text>{children}</Text>
@@ -49,7 +50,15 @@ const styles = {
     position: 'relative',
     borderWidth: 1
   },
-  textOverPic: {},
+  textOverPic: {
+    position:'absolute',
+    right: 15,
+    top: 175,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    color: 'white',
+    fontFamily: 'Montserrat',
+    flexGrow: 0
+  },
   picStyle: {
     flex: 1,
     height: 200,

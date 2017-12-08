@@ -9,15 +9,16 @@ const remote =
 
 export default class TopDestinations extends Component {
   render() {
+    const {containerStyle, headerStyle, headerDescStyle, boxContainerStyle} = styles;
     return (
-      <View style={styles.containerStyle}>
+      <View style={containerStyle}>
         <View>
-          <Text style={styles.headerStyle}>TOP DESTINATIONS</Text>
-          <Text style={styles.headerDescStyle}>
+          <Text style={headerStyle}>TOP DESTINATIONS</Text>
+          <Text style={headerDescStyle}>
             Some of the top destinations for your next summer adventure.
           </Text>
         </View>
-        <View style={styles.boxContainerStyle}>
+        <View style={boxContainerStyle}>
           <Box
             picUrl="https://www.gapyear.com/images/content/11.07.18-bcp_ft_australia-3_17191420.jpg"
             header="AUSTRALIA"

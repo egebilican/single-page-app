@@ -1,20 +1,26 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
+
 const Footer = () => {
+  const {bgStyle, footerContainerStyle, textStyle, buttonContainerStyle, buttonStyle} = styles;
+  
   return (
-    <View style={styles.bgStyle}>
-      <View style={styles.footerContainer}>
-        <Text style={{ fontFamily: 'Open Sans', fontSize: 14 }}>
+    <View style={bgStyle}>
+      <View style={footerContainerStyle}>
+        <Text style={textStyle}>
           Copyright © 2014 Travelly. All Rights Reserved. Designed for
           Despreneur
         </Text>
-        <View style={{ flexDirection: 'row' }}>
-          <Text style={styles.buttonStyle}>HOME</Text>
-          <Text style={styles.buttonStyle}>ABOUT</Text>
-          <Text style={styles.buttonStyle}>BLOG</Text>
-          <Text style={styles.buttonStyle}>PRESS</Text>
-          <Text style={styles.buttonStyle}>CONTACT</Text>
+
+        <View
+          style={buttonContainerStyle}
+        >
+          <Text style={buttonStyle}>HOME</Text>
+          <Text style={buttonStyle}>ABOUT</Text>
+          <Text style={buttonStyle}>BLOG</Text>
+          <Text style={buttonStyle}>PRESS</Text>
+          <Text style={buttonStyle}>CONTACT</Text>
         </View>
       </View>
     </View>
@@ -24,19 +30,30 @@ const Footer = () => {
 const styles = {
   bgStyle: {
     backgroundColor: 'rgb(238,238,238)',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minHeight: 70
+    paddingBottom: 30,
+    minHeight: 70,
+    flex: 1
   },
-  footerContainer: {
+  footerContainerStyle: {
     maxWidth: 1000,
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    width: '100%'
   },
   buttonStyle: {
     paddingLeft: 10,
-    fontFamily: 'Montserrat'
+    fontFamily: 'Montserrat',    
+  },
+  buttonContainerStyle: {
+    flexDirection: 'row',
+    flex: 1,
+    alignContent: 'center',
+    justifyContent: 'center',
+    flexWrap: 'wrap'
+  },
+  textStyle: {
+    fontFamily: 'Open Sans', fontSize: 14, flex: 1
   }
 };
 

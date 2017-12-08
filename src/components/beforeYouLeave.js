@@ -9,13 +9,20 @@ const remote =
 
 export default class BeforeYouLeave extends Component {
   render() {
+    const {
+      containerStyle,
+      headerStyle,
+      headerDescStyle,
+      boxContainerStyle
+    } = styles;
+
     return (
-      <View style={styles.containerStyle}>
+      <View style={containerStyle}>
         <View>
-          <Text style={styles.headerStyle}>Before You Leave</Text>
+          <Text style={headerStyle}>Before You Leave</Text>
         </View>
 
-        <View style={styles.boxContainerStyle}>
+        <View style={boxContainerStyle}>
           <Box header="VISA&DOCUMENTS">
             There are some things you should take care of before going to your
             next adventure. We will help you to get required visas and documents
@@ -41,13 +48,12 @@ export default class BeforeYouLeave extends Component {
         >
           GET HOTTEST DEALS TO YOUR INBOX
         </Text>
-        <Bar 
-        placeholder='E-mail adress'
-        buttonText='Subscribe'
-        placeholderTextColor= 'white'
-        style={{backgroundColor: 'rgba(0,0,0,0.1)'}}
+        <Bar
+          placeholder="E-mail adress"
+          buttonText="Subscribe"
+          placeholderTextColor="white"
+          style={{ backgroundColor: 'rgba(0,0,0,0.1)' }}
         />
-
       </View>
     );
   }
