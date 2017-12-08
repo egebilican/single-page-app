@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Dimensions, Image } from 'react-native';
+import { Text, View, Dimensions, Image, TouchableOpacity } from 'react-native';
 import Bar from './bar';
 
 const windowHeight = Dimensions.get('window').height;
@@ -23,24 +23,21 @@ export default class LandingPage extends Component {
     return (
       <View style={mainStyle}>
         <View style={bgStyle}>
-          //background image
           <Image style={imgStyle} source={{ uri: picUrl }} />
         </View>
         <View style={contentStyle}>
-          //content
           <View style={bannerContStyle}>
-            //banner
             <View style={bannerStyle}>
               <Text style={{ color: 'white', fontSize: 32 }}>Travelly</Text>
-              <Text style={{ color: 'white', fontSize: 32 }}>||||</Text>
+              <TouchableOpacity>
+                <Text style={{ color: 'white', fontSize: 32 }}>||||</Text>
+              </TouchableOpacity>
             </View>
           </View>
           <View style={textContStyle}>
-            //main text
             <Text style={textStyle}>{text}</Text>
           </View>
           <View style={{ flex: 2 }}>
-            //search bar
             <Bar placeholder="Start typing..." buttonText="GO" />
           </View>
         </View>
@@ -77,7 +74,6 @@ const styles = {
     margin: 5
   },
   bannerContStyle: {
-    //banner
     flex: 1,
     alignContent: 'center',
     justifyContent: 'center'

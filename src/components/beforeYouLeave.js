@@ -71,14 +71,8 @@ const styles = {
     fontFamily: 'Montserrat',
     // paddingLeft: '10px',
     //  paddingTop: '60px',
-    color: 'rgb(50,50,50)'
-    //    fontWeight: '500'
-  },
-  headerDescStyle: {
-    fontFamily: 'Open Sans',
-    color: 'rgb(139,139,139)',
-    fontSize: 15
-    //    fontWeight: 400
+    color: 'rgb(50,50,50)',
+    fontWeight: '500'
   },
   boxContainerStyle: {
     flexDirection: 'row',

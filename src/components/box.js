@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Dimensions, Image } from 'react-native';
+import { Text, View, Dimensions, Image, TouchableOpacity } from 'react-native';
 
 const window = Dimensions.get('window');
 //592 height
@@ -10,6 +10,7 @@ const Box = props => {
   const { headerStyle, boxStyle, picStyle, textStyle, textOverPic } = styles;
   if (props.picUrl) {
     return (
+      <TouchableOpacity>
       <View style={boxStyle}>
         <Image
           style={picStyle}
@@ -19,23 +20,26 @@ const Box = props => {
         />
         <Text style={textOverPic}>{price}</Text>
         <View style={textStyle}>
-          <View style={headerStyle}>
-            <Text>{header}</Text>
+          <View>
+            <Text style={headerStyle}>{header}</Text>
           </View>
           <Text>{children}</Text>
         </View>
       </View>
+      </TouchableOpacity>
     );
   }
   return (
+    <TouchableOpacity>
     <View style={boxStyle}>
       <View style={textStyle}>
-        <View style={headerStyle}>
-          <Text>{header}</Text>
+        <View >
+          <Text style={headerStyle}>{header}</Text>
         </View>
         <Text>{children}</Text>
       </View>
     </View>
+    </TouchableOpacity>    
   );
 };
 
@@ -69,7 +73,9 @@ const styles = {
     padding: 0
   },
   textStyle2: {},
-  headerStyle: {}
+  headerStyle: {
+    fontWeight: '700'
+  }
 };
 
 export default Box;
